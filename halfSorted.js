@@ -10,8 +10,24 @@ let arr2 = [56, 98, 65, 3, 4, 58, 68, 90, 12, 34, 45]
 
 
 const halfSorted = function(arr) {
+let x = Math.floor((arr.length / 2));
+let arrFirst = [];
+let arrSecond = [];
 
-};
+for ( i = 0; i < x-1 ; i++) {
+  arrFirst.push(arr[i])
+  arrFirst.sort((a,b) => a-b)
+}
+
+for ( j = x; j < arr.length ; j++) {
+  arrSecond.push(arr[j])
+  arrSecond.sort((a,b) => b-a)
+}
+
+return arrFirst.concat(arrSecond);
+return arrFirst;
+return arrSecond;
+}
 
 
 console.log(halfSorted(arr1));
